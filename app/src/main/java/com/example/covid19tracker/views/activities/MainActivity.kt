@@ -1,7 +1,8 @@
-package com.example.covid19tracker
+package com.example.covid19tracker.views.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.covid19tracker.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,0 +1,50 @@
+package com.example.covid19tracker.domain.requests
+
+class GetCasesRequest(private val country: String) {
+
+    fun getParams(): Map<String, String> {
+        val params = HashMap<String, String>()
+        params["where"] = "ISO_2_CODE='$country'"
+        params["objectIds"] = ""
+        params["time"] = ""
+        params["geometry"] = ""
+        params["geometryType"] = "esriGeometryEnvelope"
+        params["inSR"] = ""
+        params["spatialRel"] = "esriSpatialRelIntersects"
+        params["resultType"] = "none"
+        params["distance"] = "0.0"
+        params["units"] = "esriSRUnit_Meter"
+        params["returnGeodetic"] = "false"
+        params["outFields"] = "CumCase,CumDeath"
+        params["returnHiddenFields"] = "false"
+        params["returnGeometry"] = "false"
+        params["featureEncoding"] = "esriDefault"
+        params["multipatchOption"] = "xyFootprint"
+        params["maxAllowableOffset"] = ""
+        params["geometryPrecision"] = ""
+        params["outSR"] = ""
+        params["datumTransformation"] = ""
+        params["applyVCSProjection"] = "false"
+        params["returnIdsOnly"] = "false"
+        params["returnUniqueIdsOnly"] = "false"
+        params["returnCountOnly"] = "false"
+        params["returnExtentOnly"] = "false"
+        params["returnQueryGeometry"] = "false"
+        params["returnDistinctValues"] = "false"
+        params["cacheHint"] = "false"
+        params["orderByFields"] = "date_epicrv+DESC"
+        params["groupByFieldsForStatistics"] = ""
+        params["outStatistics"] = ""
+        params["having"] = ""
+        params["resultOffset"] = ""
+        params["resultRecordCount"] = "1"
+        params["returnZ"] = "false"
+        params["returnM"] = "false"
+        params["returnExceededLimitFeatures"] = "false"
+        params["quantizationParameters"] = ""
+        params["sqlFormat"] = "none"
+        params["f"] = "pjson"
+        params["token"] = ""
+        return params;
+    }
+}
