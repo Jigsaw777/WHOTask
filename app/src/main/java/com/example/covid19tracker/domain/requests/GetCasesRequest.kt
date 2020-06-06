@@ -32,7 +32,7 @@ class GetCasesRequest(private val country: String) {
         params["returnQueryGeometry"] = "false"
         params["returnDistinctValues"] = "false"
         params["cacheHint"] = "false"
-        params["orderByFields"] = "date_epicrv+DESC"
+        params["orderByFields"] = "date_epicrv DESC"
         params["groupByFieldsForStatistics"] = ""
         params["outStatistics"] = ""
         params["having"] = ""
