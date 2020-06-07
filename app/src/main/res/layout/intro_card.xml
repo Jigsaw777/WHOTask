@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="@dimen/spacing_40"
-    android:layout_marginEnd="@dimen/spacing_40"
+    android:layout_margin="@dimen/spacing_12"
     android:background="@drawable/intro_bg">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -25,7 +24,7 @@
         android:layout_marginTop="@dimen/spacing_12"
         android:text="@string/intro_card_text"
         android:textColor="@color/white"
-        android:textSize="@dimen/size_18"
+        android:textSize="@dimen/size_16"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_arrow" />
 

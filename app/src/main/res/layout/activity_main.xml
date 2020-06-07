@@ -44,8 +44,7 @@
         android:visibility="invisible"
         android:layout_marginBottom="@dimen/spacing_40"
         android:clipToPadding="false"
-        android:paddingStart="@dimen/spacing_20"
-        android:paddingEnd="@dimen/spacing_20"/>
+        android:padding="@dimen/spacing_30"/>
 
     <include
         layout="@layout/loading_state"
