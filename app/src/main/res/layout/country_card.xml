@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/spacing_40"
+    android:layout_marginEnd="@dimen/spacing_40"
+    android:background="@drawable/card_bg">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_22"
+        android:layout_marginTop="@dimen/spacing_22"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_22"
+        android:text="@string/situation_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16"
+        app:layout_constraintLeft_toRightOf="@+id/tv_country"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_deaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_22"
+        android:layout_marginBottom="@dimen/spacing_22"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        android:layout_marginBottom="@dimen/spacing_22"
+        android:text="@string/total_deaths_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_deaths" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_confirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_24"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_36"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_deaths"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_country" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_22"
+        android:layout_marginTop="@dimen/spacing_4"
+        android:text="@string/confirmed_cases_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

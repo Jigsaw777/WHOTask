@@ -8,4 +8,8 @@
     <string name="inaccurate_location_data">Data shown might be inaccurate as location permission hasn\'nt been granted</string>
     <string name="ok_text">OK</string>
     <string name="main_activity_header_text">Latest Situation Reports</string>
+    <string name="intro_card_text">Swipe right to continue</string>
+    <string name="situation_text">\'s Situation in Numbers</string>
+    <string name="total_deaths_text">Total Deaths</string>
+    <string name="confirmed_cases_text">Confirmed Cases</string>
 </resources>

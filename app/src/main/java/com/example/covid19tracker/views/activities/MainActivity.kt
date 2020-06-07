@@ -5,8 +5,13 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.example.covid19tracker.R
 import com.example.covid19tracker.data.constants.AppConstants
+import com.example.covid19tracker.domain.entities.Attribute
+import com.example.covid19tracker.views.adapters.DetailsCardsAdapter
 import com.example.covid19tracker.views.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,14 +39,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun observeEvents(){
         viewModel.attributesLiveData.observe(this, Observer {
-//            tv_header.text=it.totalConfirmedCases.toString()
-            setDataInRecyclerView()
+            setDataInRecyclerView(it)
             hideLoading()
         })
     }
 
-    private fun setDataInRecyclerView(){
-
+    private fun setDataInRecyclerView(attributes : List<Attribute>){
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+        val snapHelper=LinearSnapHelper()
+        snapHelper.attachToRecyclerView(rv_cases)
+        val adapter = DetailsCardsAdapter(this)
+        adapter.setAttributes(attributes,countryName?:"")
+        rv_cases.layoutManager=layoutManager
+        rv_cases.adapter=adapter
     }
 
     private fun hideLoading(){

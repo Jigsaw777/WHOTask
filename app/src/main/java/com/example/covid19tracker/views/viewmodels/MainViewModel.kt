@@ -24,9 +24,9 @@ class MainViewModel : ViewModel(){
      *  the network event safely. Disposables respect the activity/fragment's lifecycle */
     private val compositeDisposable = CompositeDisposable()
 
-    private val getAttributes = MutableLiveData<Attribute>()
+    private val getAttributes = MutableLiveData<List<Attribute>>()
 
-    val attributesLiveData : LiveData<Attribute>
+    val attributesLiveData : LiveData<List<Attribute>>
             get() = getAttributes
 
 
@@ -36,7 +36,12 @@ class MainViewModel : ViewModel(){
             Log.d("tag","it obj : $it")
             if(it != null) {
                 val feature = it.features.maxBy { it.attributes.totalConfirmedCases }
-                getAttributes.postValue(feature?.attributes)
+                /** Dummy attribute to differentiate between first card */
+                val dummy = Attribute(totalConfirmedCases = -1L, totalDeathCases = -1L, objectId = -1)
+                val attributes = mutableListOf<Attribute>()
+                attributes.add(dummy)
+                attributes.add(feature?.attributes?:dummy)
+                getAttributes.postValue(attributes)
             }
             else{
                 Log.d("tag","null is coming")

@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="@+id/rv_cases"
         android:src="@drawable/who_logo"
         android:layout_marginBottom="@dimen/spacing_20"
+        app:layout_constraintVertical_bias="0.6"
         android:id="@+id/iv_logo"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -33,13 +34,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="@dimen/spacing_0"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/spacing_0"
         app:layout_constraintTop_toBottomOf="@+id/tv_header"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_logo"
         android:layout_marginTop="@dimen/spacing_12"
         android:id="@+id/rv_cases"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/spacing_40"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/spacing_20"
+        android:paddingEnd="@dimen/spacing_20"/>
 
     <include
         layout="@layout/loading_state"
