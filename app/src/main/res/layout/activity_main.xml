@@ -4,16 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.activities.MainActivity">
+    tools:context=".views.activities.MainActivity"
+    android:animateLayoutChanges="true">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_cases"
+        android:src="@drawable/who_logo"
+        android:layout_marginBottom="@dimen/spacing_20"
+        android:id="@+id/iv_logo"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/tv_text"/>
+        android:text="@string/main_activity_header_text"
+        android:textSize="@dimen/size_26"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="@dimen/spacing_20"
+        android:layout_marginTop="@dimen/spacing_40"
+        android:id="@+id/tv_header"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="@dimen/spacing_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/spacing_12"
+        android:id="@+id/rv_cases"
+        android:visibility="invisible"/>
+
+    <include
+        layout="@layout/loading_state"
+        android:id="@+id/results_loading"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_logo"
+        android:layout_height="@dimen/spacing_0"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_100"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

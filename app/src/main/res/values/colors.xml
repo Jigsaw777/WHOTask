@@ -5,4 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
 
     <color name="black">#000</color>
+    <color name="white">#FFF</color>
+
+    <color name="loading_color">#D3D3D3</color>
 </resources>

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- margins, paddings -->
+    <dimen name="spacing_0">0dp</dimen>
     <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
     <dimen name="spacing_22">22dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_100">100dp</dimen>
 
-    <!-- margins, paddings -->
+    <!-- letter sizes -->
     <dimen name="size_16">16sp</dimen>
     <dimen name="size_22">22sp</dimen>
+    <dimen name="size_26">26sp</dimen>
 </resources>

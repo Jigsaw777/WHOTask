@@ -144,7 +144,10 @@ class SplashActivity : AppCompatActivity() {
     private fun getNearestPossibleLocation() {
         val tm = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
         val country = tm.networkCountryIso
-        goToMainActvity(country.toUpperCase(Locale.getDefault()))
+        goToMainActvity(
+            country.toUpperCase(Locale.getDefault()),
+            Locale(Locale.getDefault().language, country).displayName
+        )
     }
 
     /** No permission check required for this method as it has been already handled before calling this method. */
@@ -185,7 +188,7 @@ class SplashActivity : AppCompatActivity() {
                             false
                         )
                     ) {
-                        goToMainActvity(iso.toUpperCase(Locale.getDefault()))
+                        goToMainActvity(iso.toUpperCase(Locale.getDefault()), countryName)
                         return
                     }
                 }
@@ -194,9 +197,10 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun goToMainActvity(code: String) {
+    private fun goToMainActvity(code: String, name: String) {
         val intent = Intent(this,MainActivity::class.java)
         intent.putExtra(AppConstants.COUNTRY_CODE,code)
+        intent.putExtra(AppConstants.COUNTRY_NAME, name)
         startActivity(intent)
     }
 
