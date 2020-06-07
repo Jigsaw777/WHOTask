@@ -28,12 +28,14 @@ domain <- data <- UI
   b) RepoImplementation package : This package contains the classes that make use of the Repositories. They contain the actual implementation methods of the Repository contracts. The reason contract implementation has been kept away from the contract declaration is to change the implementation as and when required at a later stage. This allows easy refactor without having to change other parts of the code.
   c) Services package : Services contain the network calls that need to be made and the responses that will be got after each response call.
   
-3) The UI package (The outermist layer) : The UI package consists of the Views,ie., the Activies, fragments, ViewModels, etc,. It contains : 
+3) The UI package (The outermost layer) : The UI package consists of the Views,ie., the Activies, fragments, ViewModels, etc,. It contains : 
   a) Activities : Contains the activities that are exposed to the user and with which the user interacts.
   b) Adapters : Contains the adapters that the recycler views use.
   c) CustomViews : Contains the custom views that may be used by other views as and when required.
   d) ViewHolders : Contains all the view holders that the recycler view adapters can use.
   e) ViewModels : Contains all the view models that an activity can use. View Models are lifecycle aware and also persist orientation changes. Each screen has its own view model.
+  
+4) The helpers package : This package contains the Utils or manager classes.
 
 Features : 
 1) Location is fetched in the splash activity.
