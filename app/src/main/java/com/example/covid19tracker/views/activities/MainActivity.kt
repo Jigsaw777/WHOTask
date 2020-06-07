@@ -12,6 +12,7 @@ import com.example.covid19tracker.R
 import com.example.covid19tracker.data.constants.AppConstants
 import com.example.covid19tracker.domain.entities.Attribute
 import com.example.covid19tracker.views.adapters.DetailsCardsAdapter
+import com.example.covid19tracker.views.customviews.CirclePagerIndicatorDecoration
 import com.example.covid19tracker.views.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         adapter.setAttributes(attributes,countryName?:"")
         rv_cases.layoutManager=layoutManager
         rv_cases.adapter=adapter
+        rv_cases.addItemDecoration(CirclePagerIndicatorDecoration())
     }
 
     private fun hideLoading(){
