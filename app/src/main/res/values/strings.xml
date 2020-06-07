@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Covid19Tracker</string>
+    <string name="fetch_location_text">Fetching Location…</string>
+    <string name="welcome_text">Welcome To \nCovid19 Tracker</string>
 </resources>

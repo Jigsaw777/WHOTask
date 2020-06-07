@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- margins, paddings -->
+    <dimen name="spacing_12">12dp</dimen>
+    <dimen name="spacing_22">22dp</dimen>
+
+    <!-- margins, paddings -->
+    <dimen name="size_16">16sp</dimen>
+    <dimen name="size_22">22sp</dimen>
+</resources>
