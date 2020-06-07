@@ -202,6 +202,7 @@ class SplashActivity : AppCompatActivity() {
         intent.putExtra(AppConstants.COUNTRY_CODE,code)
         intent.putExtra(AppConstants.COUNTRY_NAME, name)
         startActivity(intent)
+        finish()
     }
 
 }
