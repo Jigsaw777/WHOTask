@@ -49,3 +49,5 @@ This app can be scaled to add other features like :
 1) Show a list of countries with confirmed and death cases.
 2) Let user choose which country's cases he wants to see.
 3) As this app uses Fine location, the user can be shown nearby cases with an accuracy of 3-5 metres.
+
+The app screenshots have been shared in app/images/ folder.
