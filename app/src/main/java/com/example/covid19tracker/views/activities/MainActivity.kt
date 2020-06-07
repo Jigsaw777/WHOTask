@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.covid19tracker.R
+import com.example.covid19tracker.data.constants.AppConstants
 import com.example.covid19tracker.views.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,7 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         observeEvents()
-        viewModel.getData()
+        val code=intent.getStringExtra(AppConstants.COUNTRY_CODE)
+        viewModel.getData(code)
     }
 
     private fun observeEvents(){

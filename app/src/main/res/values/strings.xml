@@ -2,4 +2,9 @@
     <string name="app_name">Covid19Tracker</string>
     <string name="fetch_location_text">Fetching Location…</string>
     <string name="welcome_text">Welcome To \nCovid19 Tracker</string>
+    <string name="permission_reason">We require your location permission for accurate results in your vicinity.</string>
+    <string name="positive_response">OK</string>
+    <string name="negative_response">No, I don\'t want to share location</string>
+    <string name="inaccurate_location_data">Data shown might be inaccurate as location permission hasn\'nt been granted</string>
+    <string name="ok_text">OK</string>
 </resources>

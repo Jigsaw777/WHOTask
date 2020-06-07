@@ -30,9 +30,8 @@ class MainViewModel : ViewModel(){
             get() = getAttributes
 
 
-     fun getData() {
-        val c = "IN"
-        val getCasesRequest = GetCasesRequest(c)
+     fun getData(code:String) {
+        val getCasesRequest = GetCasesRequest(code)
         getCasesInfoUseCase.fetchResults(getCasesRequest).subscribeOn(Schedulers.io()).subscribe({
             Log.d("tag","it obj : $it")
             if(it != null) {

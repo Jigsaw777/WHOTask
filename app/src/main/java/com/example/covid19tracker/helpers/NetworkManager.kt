@@ -1,6 +1,6 @@
 package com.example.covid19tracker.helpers
 
-import com.example.covid19tracker.data.constants.Urls
+import com.example.covid19tracker.data.constants.AppConstants
 import com.example.covid19tracker.data.services.GetCasesService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -33,7 +33,7 @@ class NetworkManager {
         private val retrofit =
             Retrofit.Builder().addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create()).baseUrl(
-                    Urls.BASE_URL
+                    AppConstants.BASE_URL
                 )
                 .client(httpClient())
                 .build()
