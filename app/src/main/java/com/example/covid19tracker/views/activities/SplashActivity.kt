@@ -23,7 +23,5 @@ class SplashActivity : AppCompatActivity() {
             tv_fetching_location.visibility = View.VISIBLE
             pb_loading.visibility = View.VISIBLE
         }, 1500)
-
-        
     }
 }
