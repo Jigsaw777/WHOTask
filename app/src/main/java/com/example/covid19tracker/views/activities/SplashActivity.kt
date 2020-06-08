@@ -8,6 +8,7 @@ import android.location.*
 import android.os.Bundle
 import android.os.Handler
 import android.telephony.TelephonyManager
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
 
     private val locationListener = object : LocationListener {
         override fun onLocationChanged(location: Location?) {
-            processLocation(location?.latitude ?: -1.1, location?.longitude ?: -1.1)
+            processLocation(location?.latitude ?: -1899.0, location?.longitude ?: -1899.0)
         }
 
         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
@@ -174,7 +175,8 @@ class SplashActivity : AppCompatActivity() {
      * something other than English. The solution is not included in the current project for sake of simplicity*/
 
     private fun processLocation(lat: Double, long: Double) {
-        if (lat < 0 || long < 0)
+        /** max latitudes and longitudes values range between +180 to -180*/
+        if (lat < -190 || long < -190)
             getTelephonyManagerLocation()
         else {
             val geoCoder = Geocoder(this, Locale.getDefault())
@@ -198,6 +200,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun goToMainActvity(code: String, name: String) {
+        Log.d("act","code : $code")
         val intent = Intent(this,MainActivity::class.java)
         intent.putExtra(AppConstants.COUNTRY_CODE,code)
         intent.putExtra(AppConstants.COUNTRY_NAME, name)
