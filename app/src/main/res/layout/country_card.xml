@@ -36,7 +36,9 @@
         android:textColor="@color/white"
         android:textSize="@dimen/size_16"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmed_cases_text"
+        app:layout_constraintVertical_bias="0.7"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
@@ -47,7 +49,9 @@
         android:textColor="@color/white"
         android:textSize="@dimen/size_16"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/tv_deaths" />
+        app:layout_constraintLeft_toRightOf="@+id/tv_deaths"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirmed_cases_text"
+        app:layout_constraintVertical_bias="0.7"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_confirmed"
@@ -70,6 +74,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/size_16"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_confirmed" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_confirmed"
+        android:id="@+id/tv_confirmed_cases_text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

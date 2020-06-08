@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="@+id/rv_cases"
         android:src="@drawable/who_logo"
         android:layout_marginBottom="@dimen/spacing_20"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.7"
         android:id="@+id/iv_logo"/>
 
     <androidx.appcompat.widget.AppCompatTextView
